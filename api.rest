@@ -1,0 +1,58 @@
+
+
+### login user
+post http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email" : "imran@yahoo.com",
+    "password" : "password"
+}
+
+### regiser user
+post http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "firstName" : "imran",
+    "lastName" : "sarkar",
+    "email" : "imran@yahoo.com",
+    "password" : "password"
+
+}
+
+
+###
+
+get  http://localhost:5000/api/notes
+Authorization:token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4MGVkMzFlODBjMDVjMjVmY2M1NTYiLCJpYXQiOjE2MzIxOTQyNDl9.7Irx4Bn6SVUKmKwEccbZhnEcpbuwP8ZwzoLHw2oL2fU
+###
+post  http://localhost:5000/api/notes
+Content-Type: application/json
+Authorization:token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4MGVkMzFlODBjMDVjMjVmY2M1NTYiLCJpYXQiOjE2MzIxOTQyNDl9.7Irx4Bn6SVUKmKwEccbZhnEcpbuwP8ZwzoLHw2oL2fU
+
+{
+    "title" : "note",
+    "text" : "hello"
+}
+
+
+###
+put  http://localhost:5000/api/notes
+Content-Type: application/json
+Authorization:token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4MGVkMzFlODBjMDVjMjVmY2M1NTYiLCJpYXQiOjE2MzIxOTQyNDl9.7Irx4Bn6SVUKmKwEccbZhnEcpbuwP8ZwzoLHw2oL2fU
+
+{
+    "id" : "61494fc42770a54c45e2791c",
+    "title" : "new title",
+    "text" : "new Text"
+}
+
+###
+delete  http://localhost:5000/api/notes
+Content-Type: application/json
+Authorization:token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4MGVkMzFlODBjMDVjMjVmY2M1NTYiLCJpYXQiOjE2MzIxOTQyNDl9.7Irx4Bn6SVUKmKwEccbZhnEcpbuwP8ZwzoLHw2oL2fU
+
+{
+    "id" : "61496d968bab6845cf5b8834"
+}
